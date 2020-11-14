@@ -36,5 +36,36 @@ Start:
 	ret
 powerOf endp
 
+SecondElement proc
+	
+	mov rax, rcx
+	add rax, 4
 
+	ret
+SecondElement endp
+
+getElement PROC
+	dec rdx
+	mov rax, 4
+	mul	rdx
+
+	add rcx, rax
+	mov rax, rcx	
+
+	ret
+getElement endp
+
+incElements proc
+	mov r9, 3
+	
+	loophead:
+	mov r8, [rcx]
+	inc r8
+	mov [rcx], r8
+	dec r9
+	cmp r9, 0
+	jne loophead
+	
+	ret
+incElements endp
 end
