@@ -57,11 +57,12 @@ getElement endp
 
 incElements proc
 	mov r9, 3
-	
+	mov r10, 4
 	loophead:
 	mov r8, [rcx]
 	inc r8
 	mov [rcx], r8
+	add rcx, r10
 	dec r9
 	cmp r9, 0
 	jne loophead
