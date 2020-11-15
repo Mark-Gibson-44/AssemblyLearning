@@ -29,6 +29,22 @@ extern "C" int* getElement(int val[], int position);
 //Work in progress currently increments first value 3 times, should increment whole array once.
 extern "C" void incElements(int val[]);
 
+
+///////////////////////////
+// Char functions
+///////////////////////////
+//Changes a lowcase to upper
+extern "C" char makeUpper(char a);
+
+//Changes a uppercase to lower
+extern "C" char makeLower(char a);
+
+//Works on variables not on literals
+extern "C" char switchCase(char a);
+
+//WIP should switch the contents of one var to the other
+extern "C" void swapChar(char a, char b);
+
 int main()
 {
 	//std::cout << testReturn(3) << std::endl;
@@ -44,8 +60,15 @@ int main()
 	a[0];
 
 	//std::cout << incElements(a);
-	incElements(a);
-	std::cout << a[1];
+	//incElements(a);
+	char x, y;
+	x = 'a';
+	
+	std::cout << switchCase(x);
+	
+	
+
+	//swapChar(x, y);
 	
 	return 0;
 }

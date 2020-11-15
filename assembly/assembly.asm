@@ -69,4 +69,41 @@ incElements proc
 	
 	ret
 incElements endp
+
+makeUpper proc
+	mov rax, rcx
+	sub rax, 32 
+	ret
+makeUpper endp
+
+makeLower proc
+	mov rax, rcx
+	add rax, 32
+
+	ret
+makeLower endp
+
+switchCase proc
+	mov rax, rcx
+	
+	cmp rax, 91
+	
+	jg lowerCase
+	
+	add rax, 32
+	ret
+	lowerCase:
+	sub rax, 32 
+	ret
+switchCase endp
+
+swapChar proc
+	
+	mov r8, rcx
+	mov r9, rdx
+	mov rcx, r9
+	mov rdx, r8
+
+	ret
+swapChar endp
 end
