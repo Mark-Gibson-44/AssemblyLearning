@@ -43,7 +43,7 @@ extern "C" char makeLower(char a);
 extern "C" char switchCase(char a);
 
 //WIP should switch the contents of one var to the other
-extern "C" void swapChar(char a, char b);
+extern "C" void swapChar(char*a, char* b);
 
 int main()
 {
@@ -62,13 +62,17 @@ int main()
 	//std::cout << incElements(a);
 	//incElements(a);
 	char x, y;
+	char *ptr1, *ptr2;
+	
+	y = 'b';
 	x = 'a';
-	
-	std::cout << switchCase(x);
-	
-	
 
-	//swapChar(x, y);
+	//std::cout << switchCase(x);
 	
+	
+	std::cout << "X equals: " << x << " Y equals: " << y << std::endl;
+	swapChar(&x, &y);
+	std::cout << "X equals: " << x << " Y equals: " << y << std::endl;
+
 	return 0;
 }

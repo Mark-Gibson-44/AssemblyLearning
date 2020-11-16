@@ -99,10 +99,10 @@ switchCase endp
 
 swapChar proc
 	
-	mov r8, rcx
-	mov r9, rdx
-	mov rcx, r9
-	mov rdx, r8
+	mov r8, [rcx]
+	mov r9, [rdx]
+	mov [rcx], r9
+	mov [rdx], r8
 
 	ret
 swapChar endp
